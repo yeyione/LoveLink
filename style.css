@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background: #000000;
+}
+
+/* ====== ENCABEZADO (HEADER) ====== */
+.header {
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+/* ====== LOGO ====== */
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+/* ====== NAVEGACIÓN (ENLACES) ====== */
+.header nav {
+    margin-left: auto; /* Mueve los enlaces a la derecha */
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex; /* Alinea los enlaces en fila */
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+.header .nav-links li {
+    display: inline-block;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-weight: 700;
+    color: #ba3e3e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header .nav-links a:hover {
+    color: #ff4d4d;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header nav {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .header .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 85px);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3px;
+}
+
+.container img{
+    max-width: 400px;
+    height: auto;
+}
+.info-box{
+    background: #924d4d;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-align: center;
+    margin: 2;
+    width: 400%;
+    max-width: 900px;
+
+
+}
+
+.info-box p{
+    color: aliceblue;
+    font-family: 'Poppins' sans-serif;
+    font-size: 3vh;
+
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    padding: 25px;
+    background-color: aliceblue;
+    border-radius: 12px;
+    box-shadow: 0 4 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.login-container label{
+    font-family: 'Poppins' sans-serif;
+    color: #d3c9c9;
+}
+
+.login-container input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button{
+    padding: 10px;
+    background-color: #ba3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+.login-container button:hover {
+    background-color: #ff4d4d;
+}
+
+.login-container a {
+    text-align: center;
+    color: #ba3e3e;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
