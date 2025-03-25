@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style_regis.css">
+    <title>registrarse</title>
+</head>
+<body>
+    <header>
+        <h1>Crear cuenta</h1>
+    </header>
+    <main>
+        <form action="#">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" required>
+            <br>
+            <label for="lastnm">Apellidos: </label>
+            <input type="text" name="lastnm" id="lastnm" required>
+            <br>
+            <label for="birthdate">Fecha de nacimiento: </label>
+            <input type="date" name="birthdate" id="birthdate" required>
+            <br>
+            <br>
+            <label for="genero">Género: </label>
+            <br>
+            <input type="radio" name="genero" id="genero" value="hombre" checked>Hombre
+            <input type="radio" name="genero" id="genero" value="mujer">Mujer
+            <input type="radio" name="genero" id="genero" value="otro">Otro
+            <br>
+            <br>
+            <label for="orien">Orientación sexual: </label>
+            <br>
+            <input type="radio" name="genero" id="genero" value="hombre" checked>Hombre
+            <input type="radio" name="genero" id="genero" value="mujer">Mujer
+            <input type="radio" name="genero" id="genero" value="otro">Otro
+            <br>
+            <br>
+            <label for="interesa">¿Qué te interesa ver?</label>
+            <br>
+            <textarea name="interesa" id="interesa"></textarea>
+            <br>
+            <label for="busca">¿Qué estás buscando?</label>
+            <br>
+            <textarea name="busca" id="busca" required></textarea>
+            <br>
+            <label for="intereses">Intereses</label>
+            <br>
+            <textarea name="intereses" id="intereses" required></textarea>
+            <br>
+            <label for="fotos">Fotos</label>
+            <table id="fotostabla">
+                <tr>
+                    <td><input type="file" name="fotos" id="fotos1" required></td>
+                    <td><input type="file" name="fotos" id="fotos2" required></td>
+                </tr>
+                <tr>
+                    <td><input type="file" name="fotos" id="fotos3" required></td>
+                    <td><input type="file" name="fotos" id="fotos4" required></td>
+                </tr>
+                <tr>
+                    <td><input type="file" name="fotos" id="fotos5" required></td>
+                    <td><input type="file" name="fotos" id="fotos6" required></td>
+                </tr>
+            </table>
+            <button type="submit">Registrarse</button>
+        </form>
+    </main>
+</body>
+</html>
