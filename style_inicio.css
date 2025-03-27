@@ -156,20 +156,70 @@ footer{
 }
 
 .footer-content {
-    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-footer nav ul {
+.footer-section  {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer-section ul{
     list-style: none;
     padding: 0;
 }
 
-
-
-footer nav ul li a {
-    color: #fff;
+.footer-section ul li a{
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 0.9em;
+    transition: color 0.3s;
 }
+
+.footer-section ul li a:hover{
+    color: #ff4d4d;
+}
+
+.footer-section .socials ul{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-section .socials ul li a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-section .socials ul li a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #ff0505;
+    border-top: 1px solid #333333;
+    padding-top: 10px;
+}
+
 
