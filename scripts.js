@@ -15,6 +15,8 @@ document.getElementById('login').addEventListener('submit', function(event) {
 
 // Cargar los datos guardados (si los hay)
 window.onload = function() {
-    document.getElementById('email').value = localStorage.getItem('email');
-    document.getElementById('password').value = localStorage.getItem('contraseña');
+    if (localStorage.getItem('email') && localStorage.getItem('contraseña')) {
+        document.getElementById('email').value = localStorage.getItem('email');
+        document.getElementById('password').value = localStorage.getItem('contraseña');
+    }
 };
