@@ -39,7 +39,7 @@ body {
 .header h1:hover {
     color: #ba3e3e;
     text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
-    transition: 
+    /* transition: */
 }
 .header h1 span {
     color: #ff4d4d;

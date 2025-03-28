@@ -4,7 +4,7 @@ document.getElementById('login').addEventListener('submit', function(event) {
 
     // Obtener los datos del formulario
     const email = document.getElementById('email').value;
-    const contraseña = document.getElementById('contraseña').value;
+    const contraseña = document.getElementById('password').value;
 
     // Guardar los datos en localStorage
     localStorage.setItem('email', email);
@@ -15,8 +15,6 @@ document.getElementById('login').addEventListener('submit', function(event) {
 
 // Cargar los datos guardados (si los hay)
 window.onload = function() {
-    if (localStorage.getItem('email') && localStorage.getItem('email')) {
-        document.getElementById('email').value = localStorage.getItem('email');
-        document.getElementById('contraseña').value = localStorage.getItem('email');
-    }
+    document.getElementById('email').value = localStorage.getItem('email');
+    document.getElementById('password').value = localStorage.getItem('contraseña');
 };
