@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
 }
 
 body {
-    background: #000000;
+    background: #ffffff;
+    background-image: url(images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /* ====== ENCABEZADO (HEADER) ====== */
@@ -22,6 +24,31 @@ body {
     padding: 5px 10%;
 }
 
+.header h1 {
+    color: #ff4d4d;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    position: absolute;
+    right: 72%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.header h1:hover {
+    color: #ba3e3e;
+    text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+    /* transition: */
+}
+
+.header h1 span {
+    color: #ff4d4d;
+    font-size: 0.5em;
+    font-weight: 400;
+    display: block;
+    margin-top: 5px;
+}
+
 /* ====== LOGO ====== */
 .header .logo {
     cursor: pointer;
@@ -31,6 +58,7 @@ body {
     height: 70px;
     width: auto;
     transition: all 0.3s;
+    margin-top: 15%;
 }
 
 .header .logo img:hover {
@@ -39,13 +67,16 @@ body {
 
 /* ====== NAVEGACIÓN (ENLACES) ====== */
 .header nav {
-    margin-left: auto; /* Mueve los enlaces a la derecha */
+    margin-left: auto;
+    /* Mueve los enlaces a la derecha */
 }
 
 .header .nav-links {
     list-style: none;
-    display: flex; /* Alinea los enlaces en fila */
-    gap: 20px; /* Espacio entre enlaces */
+    display: flex;
+    /* Alinea los enlaces en fila */
+    gap: 20px;
+    /* Espacio entre enlaces */
 }
 
 .header .nav-links li {
@@ -90,100 +121,99 @@ body {
         margin-top: 10px;
     }
 }
-.main{
+
+header {
+    h1 {
+        color: #ffffffd8;
+        font-size: 8vh;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        margin: 40px;
+    }
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 85px);
+    min-height: calc(100vh - 85px);
 }
 
-.container{
+footer {
+    background-color: #000000bd;
+    color: #ffffff;
+    padding: 2px 0;
+}
+
+
+.footer-content {
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 3px;
-}
-
-.container img{
-    max-width: 400px;
-    height: auto;
-}
-.info-box{
-    background: #924d4d;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #ff4d4d;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #cccccc;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #ff4d4d;
+            }
+        }
+    }
+
+    .socials {
+        ul {
+            display: flex;
+            gap: 10px;
+
+            li a img {
+                width: 30px;
+                height: 30px;
+                transition: transform all 0.3s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
     margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    font-size: 0.8em;
+    color: #ffffff;
+    border-top: 1px solid #333333;
+    padding-top: 10px;
     text-align: center;
-    margin: 2;
-    width: 400%;
-    max-width: 900px;
-
-
-}
-
-.info-box p{
-    color: aliceblue;
-    font-family: 'Poppins' sans-serif;
-    font-size: 3vh;
-
-}
-
-.login-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: aliceblue;
-}
-
-.login-container form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 350px;
-    padding: 25px;
-    background-color: aliceblue;
-    border-radius: 12px;
-    box-shadow: 0 4 15px rgba(0, 0, 0, 0.2);
-
-}
-
-.login-container label{
-    font-family: 'Poppins' sans-serif;
-    color: #d3c9c9;
-}
-
-.login-container input{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.login-container button{
-    padding: 10px;
-    background-color: #ba3e3e;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    
-}
-.login-container button:hover {
-    background-color: #ff4d4d;
-}
-
-.login-container a {
-    text-align: center;
-    color: #ba3e3e;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.login-container a:hover {
-    text-decoration: underline;
 }
