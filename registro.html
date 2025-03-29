@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/style_regis.css">
+    <script src="./registro.js"></script>
     <title>registrarse</title>
 </head>
 
@@ -18,6 +19,15 @@
             <br>
             <label for="lastnm">Apellidos: </label>
             <input type="text" name="lastnm" id="lastnm" required>
+            <br>
+            <label for="correo">Correo: </label>
+            <input type="email" name="correo" id="correo">
+            <br>
+            <label for="password">Contraseña: </label>
+            <input type="password" name="password" id="password">
+            <br>
+            <label for="password">Verificar contraseña: </label>
+            <input type="password" name="password" id="password">
             <br>
             <label for="birthdate">Fecha de nacimiento: </label>
             <input type="date" name="birthdate" id="birthdate" required>
@@ -53,15 +63,15 @@
             <table id="fotostabla">
                 <tr>
                     <td><input type="file" name="fotos" id="fotos1" required></td>
-                    <td><input type="file" name="fotos" id="fotos2" required></td>
+                    <td><input type="file" name="fotos" id="fotos2"></td>
                 </tr>
                 <tr>
-                    <td><input type="file" name="fotos" id="fotos3" required></td>
-                    <td><input type="file" name="fotos" id="fotos4" required></td>
+                    <td><input type="file" name="fotos" id="fotos3"></td>
+                    <td><input type="file" name="fotos" id="fotos4"></td>
                 </tr>
                 <tr>
-                    <td><input type="file" name="fotos" id="fotos5" required></td>
-                    <td><input type="file" name="fotos" id="fotos6" required></td>
+                    <td><input type="file" name="fotos" id="fotos5"></td>
+                    <td><input type="file" name="fotos" id="fotos6"></td>
                 </tr>
             </table>
             <button type="submit">Registrarse</button>

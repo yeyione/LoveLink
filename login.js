@@ -1,22 +1,24 @@
-// Función para guardar los datos en localStorage
-document.getElementById('login').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar que se envíe el formulario
+document.querySelector(".login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    // Obtener los datos del formulario
-    const email = document.getElementById('email').value;
-    const contraseña = document.getElementById('password').value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    // Guardar los datos en localStorage
-    localStorage.setItem('email', email);
-    localStorage.setItem('contraseña', contraseña);
+    // Obtener usuarios del localStorage
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    alert('Datos guardados!');
-});
+    // Verificar credenciales
+    const usuarioValido = usuarios.find(
+        (usuario) => usuario.correo === email && usuario.password === password
+    );
 
-// Cargar los datos guardados (si los hay)
-window.onload = function() {
-    if (localStorage.getItem('email') && localStorage.getItem('contraseña')) {
-        document.getElementById('email').value = localStorage.getItem('email');
-        document.getElementById('password').value = localStorage.getItem('contraseña');
+    if (usuarioValido) {
+        // Guardar sesión activa
+        localStorage.setItem("sesionActiva", JSON.stringify(usuarioValido));
+
+        // Redirigir a inicio.html
+        window.location.href = "inicio.html";
+    } else {
+        alert("Correo o contraseña incorrectos.");
     }
-};
+});
