@@ -1,10 +1,10 @@
-document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-
+const btnregister = document.getElementById("btn-register");
+btnregister.addEventListener("click", () => {
   const nombre = document.getElementById("nombre").value;
   const apellidos = document.getElementById("lastnm").value;
   const correo = document.getElementById("correo").value;
-  const password = document.getElementById("password").value;
+  const password = document.getElementById("password1").value;
+  // const password2 = document.getElementById("password2").value;
   const birthdate = document.getElementById("birthdate").value;
   const genero = document.querySelector("input[name='genero']:checked").value;
   const orientacion = document.querySelector(
