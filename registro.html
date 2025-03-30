@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/style_regis.css">
-    <script src="./registro.js"></script>
+    <script src="./registro.js" defer></script>
     <title>registrarse</title>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
     <main>
-        <form action="#">
+        <form>
             <label for="nombre">Nombre: </label>
             <input type="text" name="nombre" id="nombre" required>
             <br>
@@ -24,10 +24,10 @@
             <input type="email" name="correo" id="correo">
             <br>
             <label for="password">Contraseña: </label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password1">
             <br>
             <label for="password">Verificar contraseña: </label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password2">
             <br>
             <label for="birthdate">Fecha de nacimiento: </label>
             <input type="date" name="birthdate" id="birthdate" required>
@@ -35,16 +35,16 @@
             <br>
             <label for="genero">Género: </label>
             <br>
-            <input type="radio" name="genero" id="genero" value="hombre" checked>Hombre
-            <input type="radio" name="genero" id="genero" value="mujer">Mujer
-            <input type="radio" name="genero" id="genero" value="otro">Otro
+            <input type="radio" name="genero" id="genero1" value="hombre" checked>Hombre
+            <input type="radio" name="genero" id="genero2" value="mujer">Mujer
+            <input type="radio" name="genero" id="genero3" value="otro">Otro
             <br>
             <br>
             <label for="orien">Orientación sexual: </label>
             <br>
-            <input type="radio" name="orien" id="orien" value="hombre" checked>Hombre
-            <input type="radio" name="orien" id="orien" value="mujer">Mujer
-            <input type="radio" name="orien" id="orien" value="otro">Otro
+            <input type="radio" name="orien" id="orien1" value="hombre" checked>Hombre
+            <input type="radio" name="orien" id="orien2" value="mujer">Mujer
+            <input type="radio" name="orien" id="orien3" value="otro">Otro
             <br>
             <br>
             <label for="interesa">¿Qué te interesa ver?</label>
@@ -62,7 +62,7 @@
             <label for="fotos">Fotos</label>
             <table id="fotostabla">
                 <tr>
-                    <td><input type="file" name="fotos" id="fotos1" required></td>
+                    <td><input type="file" name="fotos" id="fotos1"></td>
                     <td><input type="file" name="fotos" id="fotos2"></td>
                 </tr>
                 <tr>
@@ -74,7 +74,7 @@
                     <td><input type="file" name="fotos" id="fotos6"></td>
                 </tr>
             </table>
-            <button type="submit">Registrarse</button>
+            <button type="button" id="btn-register">Registrarse</button>
         </form>
     </main>
     <div id="footer-placeholder"></div>
