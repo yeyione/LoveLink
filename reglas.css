@@ -1,77 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.header {
-    background: #000000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding: 5px 10%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    font-size: 20px;
-}
-
-/* ====== LOGO ====== */
-.header .images-2 {
-    cursor: pointer;
-}
-
-.header .images-2 {
-    height: 70px;
-    width: auto;
-    transition: all 0.3s;
-}
-
-.header .images-2:hover {
-    transform: scale(1.2);
-}
-
-/* ====== NAVEGACIÓN (ENLACES) ====== */
-.header nav {
-    margin-left: auto; /* Mueve los enlaces a la derecha */
-}
-
-.header .nav-links {
-    list-style: none;
-    display: flex; /* Alinea los enlaces en fila */
-    gap: 20px; /* Espacio entre enlaces */
-}
-
-.header .nav-links li {
-    display: inline-block;
-}
-
-.header .nav-links li:hover {
-    transform: scale(1.1);
-}
-
-.header .nav-links a {
-    font-weight: 700;
-    color: #ba3e3e;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.header .nav-links a:hover {
-    color: #ff4d4d;
-}
-body {
-    font-family: 'Poppins', sans-serif;
+main {
     background-color: rgb(255, 255, 255);
     color: rgb(252, 251, 251);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
+
 .container {
     background-color: #000000;
     padding: 20px;
@@ -79,54 +14,55 @@ body {
     text-align: center;
     width: 400px;
     transition: box-shadow 0.4s ease;
-}
 
-.container:hover {
-    box-shadow: 0 0 15px rgb(250, 10, 10);
-    
-}
+    &:hover {
+        box-shadow: 0 0 15px rgb(250, 10, 10);
+    }
 
+    .images-1 {
+        width: 20%;
+        height: 129%;
+        border-radius: 50%;
+        transition: all 0.3s;
+        animation: latido 1s infinite ease-in-out;
+    }
 
-.images-1{
-    width: 20%;
-    height: 129%;
-    border-radius: 50%;
-    transition: all 0.3s;
-    animation: latido 1s infinite ease-in-out;
+    .images-1:hover {
+        transform: scale(1.2);
+    }
 
+    h1 {
+        font-size: 13px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    li {
+        background: url('check-icon.png') no-repeat left center;
+        background-size: 20px;
+        padding-left: 30px;
+        margin: 10px 0;
+    }
 }
 
 @keyframes latido {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
 }
 
-.images-1:hover {
-    transform: scale(1.2);
-}
-
-
-h1 {
-    font-size: 13px;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-li {
-    background: url('check-icon.png') no-repeat left center;
-    background-size: 20px;
-    padding-left: 30px;
-    margin: 10px 0;
-}
 .btn {
     background-color: red;
     color: rgb(0, 0, 0);
@@ -135,14 +71,16 @@ li {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    font-family: poppins;
 }
-button:hover { /* Efecto hover */
+
+button:hover {
+    /* Efecto hover */
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
-button:active { /* Efecto al hacer clic */
-    transform: scale(0.98); /* Ligero efecto de presión */
+button:active {
+    /* Efecto al hacer clic */
+    transform: scale(0.98);
+    /* Ligero efecto de presión */
 }
-
