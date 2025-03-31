@@ -31,7 +31,7 @@ body {
     font-weight: 700;
     margin: 10px ;
     position: absolute;
-    right: 75%;
+    right: 20%;
     transform: translateX(-50%);
     cursor: pointer;
 
@@ -39,7 +39,7 @@ body {
 .header h1:hover {
     color: #ba3e3e;
     text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
-    transition: 
+    transition: all 0.3s;
 }
 .header h1 span {
     color: #ff4d4d;
