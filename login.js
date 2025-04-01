@@ -17,7 +17,7 @@ document.querySelector(".login-form").addEventListener("submit", function (event
         localStorage.setItem("sesionActiva", JSON.stringify(usuarioValido));
 
         // Redirigir a inicio.html
-        window.location.href = "inicio.html";
+        window.location.href = "swipe.html";
     } else {
         alert("Correo o contraseña incorrectos.");
     }
