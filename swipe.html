@@ -1,131 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swipe Match</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style_swipe.css">
-    <link rel="stylesheet" href="style_header.css">
-    <script src="header.js"></script>
 </head>
+
 <body>
-    <div id="header-placeholder"></div>
+    <!-- <div id="header-placeholder"></div> -->
+    <header class="header">
+        <div class="logo">
+            <a href="inicio.html">
+                <img src="images/logo.jpg" alt="logo">
+            </a>
+        </div>
+        <h1>LoverLink</h1>
+        <h2>Swipe Match</h2>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="msjs.html">Mensajes</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-    <div class="card-wrapper" id="wrapper1">
-        <div class="card" id="card1">
-        <h2>Persona 1</h2>
-        <p>Descripción breve</p>
-    </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper1')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper1')">❤️</button>
-        </div>
-    </div>
+    <main>
+        <div class="container">
+            <div class="card-wrapper" id="wrapper1">
+                <div class="card" id="card1">
+                    <h2>Persona 1</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper1')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper1')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper2">
-        <div class="card" id="card2">
-        <h2>Persona 2</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper2')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper2')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper2">
+                <div class="card" id="card2">
+                    <h2>Persona 2</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper2')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper2')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper3">
-        <div class="card" id="card3">
-        <h2>Persona 3</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper3')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper3')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper3">
+                <div class="card" id="card3">
+                    <h2>Persona 3</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper3')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper3')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper4">
-        <div class="card" id="card4">
-        <h2>Persona 4</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper4')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper4')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper4">
+                <div class="card" id="card4">
+                    <h2>Persona 4</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper4')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper4')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper5">
-        <div class="card" id="card5">
-        <h2>Persona 5</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper5')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper5')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper5">
+                <div class="card" id="card5">
+                    <h2>Persona 5</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper5')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper5')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper6">
-        <div class="card" id="card6">
-        <h2>Persona 6</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper6')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper6')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper6">
+                <div class="card" id="card6">
+                    <h2>Persona 6</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper6')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper6')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper7">
-        <div class="card" id="card7">
-        <h2>Persona 7</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper7')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper7')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper7">
+                <div class="card" id="card7">
+                    <h2>Persona 7</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper7')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper7')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper8">
-        <div class="card" id="card8">
-        <h2>Persona 8</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper8')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper8')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper8">
+                <div class="card" id="card8">
+                    <h2>Persona 8</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper8')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper8')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper9">
-        <div class="card" id="card9">
-        <h2>Persona 9</h2>
-        <p>Descripción breve</p>
-        </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper9')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper9')">❤️</button>
-        </div>
-    </div>
+            <div class="card-wrapper" id="wrapper9">
+                <div class="card" id="card9">
+                    <h2>Persona 9</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper9')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper9')">❤️</button>
+                </div>
+            </div>
 
-    <div class="card-wrapper" id="wrapper10">
-        <div class="card" id="card10">
-        <h2>Persona 10</h2>
-        <p>Descripción breve</p>
+            <div class="card-wrapper" id="wrapper10">
+                <div class="card" id="card10">
+                    <h2>Persona 10</h2>
+                    <p>Descripción breve</p>
+                </div>
+                <div class="controls">
+                    <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper10')">💔</button>
+                    <button class="button like" onclick="handleSwipe('like', 'wrapper10')">❤️</button>
+                </div>
+            </div>
         </div>
-        <div class="controls">
-        <button class="button dislike" onclick="handleSwipe('dislike', 'wrapper10')">💔</button>
-        <button class="button like" onclick="handleSwipe('like', 'wrapper10')">❤️</button>
-        </div>
-    </div>
-    </div>
+    </main>
 
-    <script src="repeat.js"></script>
+    <!-- <div id="footer-placeholder"></div> -->
+    <!-- <script src="repeat-inicio.js"></script> -->
     <script src="script-swipe.js"></script>
 
 </body>
+
 </html>
