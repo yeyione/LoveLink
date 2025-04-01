@@ -19,7 +19,7 @@ const users = [
     genero: "otro",
     orientacion: "otro",
     intereses: ".",
-    fotos: []
+    fotos: [,,,,,,]
   },
   {
     nombre: "nombre2",
@@ -30,7 +30,7 @@ const users = [
     genero: "otro",
     orientacion: "otro",
     intereses: ".",
-    fotos: []
+    fotos: [,,,,,,]
   }
 ];
 
@@ -42,7 +42,7 @@ users.forEach(user => {
 });
 
 // Almacenar usuarios en localStorage
-localStorage.setItem("usuarios", JSON.stringify(users));
+localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
 /////////////////////////////////////////////////////////
 
