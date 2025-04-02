@@ -2,47 +2,107 @@
 const sesionActiva = JSON.parse(localStorage.getItem("sesionActiva"));
 
 if (!sesionActiva) {
-  // Redirigir a login.html si no hay sesión activa
-  window.location.href = "login.html";
+    // Redirigir a login.html si no hay sesión activa
+    window.location.href = "login.html";
 }
 
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 // Usuarios de ejemplo para mensajes
 const users = [
-  {
-    nombre: "nombre1",
-    apellidos: "apellidos1",
-    correo: "correo_user1@email.com",
-    password: "pass111",
-    birthdate: "1999-01-01",
-    genero: "otro",
-    orientacion: "otro",
-    intereses: ".",
-    fotos: [,,,,,,]
-  },
-  {
-    nombre: "nombre2",
-    apellidos: "apellidos2",
-    correo: "correo_user2@email.com",
-    password: "pass222",
-    birthdate: "2001-01-01",
-    genero: "otro",
-    orientacion: "otro",
-    intereses: ".",
-    fotos: [,,,,,,]
-  }
+    {
+        nombre: "nombre1",
+        apellidos: "apellidos1",
+        correo: "correo_user1@email.com",
+        password: "pass111",
+        birthdate: "1999-01-01",
+        genero: "otro",
+        orientacion: "otro",
+        intereses: ".",
+        fotos: [, , , , , ,]
+    },
+    {
+        nombre: "nombre2",
+        apellidos: "apellidos2",
+        correo: "correo_user2@email.com",
+        password: "pass222",
+        birthdate: "2001-01-01",
+        genero: "otro",
+        orientacion: "otro",
+        intereses: ".",
+        fotos: [, , , , , ,]
+    }
 ];
 
 // Evitar duplicados
 users.forEach(user => {
-  if (!usuarios.some(u => u.correo === user.correo)) {
-    usuarios.push(user);
-  }
+    if (!usuarios.some(u => u.correo === user.correo)) {
+        usuarios.push(user);
+    }
 });
 
 // Almacenar usuarios en localStorage
 localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+/////////////////////////////////////////////////////////
+
+var personas = [
+    {
+        imagen: "ricardo.jpg", nombre: "Ricardo Emilio Suárez Fernández",
+        descripción: "Empresario en el sector tecnológico. Fundó una startup de ciberseguridad y ha sido invitado a dar charlas en conferencias internacionales."
+    },
+    {
+        imagen: "mariana.jpg", nombre: "Mariana Espinoza López",
+        descripción: "Médica general con especialización en medicina deportiva. Ha trabajado con atletas de alto rendimiento en diversas disciplinas."
+    },
+    {
+        imagen: "carlos.jpg", nombre: "Carlos Alberto Núñez Vázquez",
+        descripción: "Músico y compositor. Toca el piano y la guitarra, y ha trabajado en la producción de bandas sonoras para cine independiente."
+    },
+    {
+        imagen: "elena.jpg", nombre: "Elena Guzmán Salas",
+        descripción: "Arquitecta con un enfoque en la sostenibilidad. Le apasiona diseñar espacios funcionales que armonicen con la naturaleza."
+    },
+    {
+        imagen: "diego.jpg", nombre: "Diego Alejandro Ríos Mendoza",
+        descripción: "Programador y entusiasta de la inteligencia artificial. Ha desarrollado varias aplicaciones innovadoras y es autodidacta en su campo."
+    },
+    {
+        imagen: "camila.jpg", nombre: "Camila Rodríguez Herrera",
+        descripción: "Psicóloga infantil con vocación por ayudar a niños con trastornos del aprendizaje. En su tiempo libre, disfruta pintar acuarelas."
+    },
+    {
+        imagen: "andres.jpg", nombre: "Andrés Eduardo Villanueva Torres",
+        descripción: "Chef con un enfoque en la cocina de autor. Ha trabajado en restaurantes con estrella Michelin y sueña con abrir su propio local."
+    },
+    {
+        imagen: "valeria.jpg", nombre: "Valeria Contreras Castillo",
+        descripción: "Escritora y periodista freelance. Su curiosidad la ha llevado a entrevistar a figuras importantes en la política y el entretenimiento."
+    },
+    {
+        imagen: "luis.jpg", nombre: "Luis Fernando Ortega Pérez",
+        descripción: "Ingeniero mecánico especializado en energías renovables. Amante del senderismo y defensor del medio ambiente."
+    },
+    {
+        imagen: "sofia.jpg", nombre: "Sofía Martínez Ramírez",
+        descripción: "Diseñadora gráfica apasionada por la ilustración digital y el arte minimalista. Vive en Barcelona y le encanta viajar en busca de inspiración."
+    }
+]
+
+personas.map(function (persona, index) {
+    document.getElementById("cardsdiv").innerHTML += `
+    <div class="card-wrapper" id="wrapper${index + 1}">
+        <div class="card" id="card${index + 1}">
+            <img src="images/${persona.imagen}" class="profile-image">
+            <h1>${persona.nombre}</h1>
+            <p>${persona.descripción}</p>
+        </div>
+        <div class="controls">
+            <button class="button dislike" onclick="handleSwipe('dislike', this.parentNode.parentNode.id)">💔</button>
+            <button class="button like" onclick="handleSwipe('like', this.parentNode.parentNode.id)">❤️</button>
+        </div>
+    </div>`
+})
 
 /////////////////////////////////////////////////////////
 
